@@ -69,5 +69,3 @@ Hypothesis 3:
 ### Power Analysis:
 
 Before I built any models, I decided to conduct an *a prior* power analysis and determine the sample size needed. The $f^2$ value can be calculated based on the following formula:
-
-$$f^2 = \frac{R^2_{adjusted}}{1 - R^2_{adjusted}}$$
