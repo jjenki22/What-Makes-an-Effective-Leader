@@ -119,7 +119,7 @@ experience_model <- lm(effect ~ leader_experience, data = teamPerc_1)
 summary(experience_model)
 ggplot(teamPerc_1, aes(leader_experience, effect)) +
   geom_point() + geom_smooth(method = "lm") + 
-  ggtitle("Leader Experience Graph") + theme_classic()
+  labs(title="Effect vs. Leader Experience", x="Leader Experience", y = "Effect") + theme_classic()
 ```
 
 As the graph titled "Leader Experience Graph" shows, as leaders gain experience, they typically have a more significant effect on their employees. This is also demonstrated by having a positive coefficient estimate for the variable leader_experience. It should be noted that the model only has an Adjusted R-squared value of 0.004406. This is an extremely low adjusted r squared, which is to be expected anytime someone is attempting to describe human behavior. However, as the graph shows, there are many data points, and this data should be investigated further. Thus, based on the model and graph, I reject my null hypothesis and accept my alternative hypothesis.
@@ -131,7 +131,7 @@ follow_up_model <- lm(effect ~ lvi40, data = teamPerc_1)
 summary(follow_up_model)
 ggplot(teamPerc_1, aes(lvi40, effect)) +
   geom_point() + geom_smooth(method = "lm") + 
-  ggtitle("Follow Up Graph") + theme_classic()
+  labs(title="Effect vs. Follow Up", x="Follow Up", y="Effect") + theme_classic()
 ```
 
 The first item that should be noted regarding this data is that the variable "lvi40," which represents the amount the leader follows up, is not a continuous variable. With this being said, the estimated coefficient for lvi40 is 0.232082, which is positive and suggests that leaders have a more significant effect when they follow up with their employees. The trend line confirms this on the graph titled "Follow Up Grap," which has a positive slope. Once again, the Adjusted R-squared value is low, which we expected because we are working with human behavior data. Due to this and the linear model, I reject my null hypothesis and accept my alternative hypothesis. 
@@ -143,7 +143,7 @@ forceful_model <- lm(effect ~ forceful, data = teamPerc_1)
 summary(forceful_model)
 ggplot(teamPerc_1, aes(forceful, effect)) +
   geom_point() + geom_smooth(method = "lm") + 
-  ggtitle("Forceful Graph") + theme_classic()
+  labs(title="Effect vs. Forceful", x="Forceful", y="Effect") + theme_classic()
 ```
 
 Finally, the last model I created was forceful, and its impact on the leader's overall effectiveness My thinking behind my hypothesis was that leaders who were forceful with their employees were going to have a negative impact on their employees. This is demonstrated by the fact that the estimated coefficient value of -0.050922 and the graph "Forceful Graph" has a downward sloping trend line. As mentioned in previous model analysis, the Adjusted R-squared value was low, but we expected this. Based on this, I once again reject my null hypothesis and accept my alternative. 
